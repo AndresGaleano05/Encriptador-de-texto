@@ -1,0 +1,390 @@
+/*importacion de tipo de fuente a css*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* CARACTERISTICAS GLOBALES CSS*/
+
+    /*: root= esto son varariables que agrupan lo que se repite varias veces*/
+:root { 
+    --color-primario:#000000; /*tipo de color*/
+    --color-secundario: #ffffff;
+    --color-terciario: #2c7da0;
+    --color-cuaternario: #ebebeb;
+    --color-boton-desencriptador: #6c757d;
+    --color-aviso: #6c757d;
+
+    --fuente-inter:"Inter", sans-serif; /*tipo de letra*/
+   
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    border: none;
+    font-family: var(--fuente-inter);
+    box-sizing: border-box; /*esto es para que los elementos hijos no salgan del elemento padre*/
+    background-color:var(--color-primario);
+    text-decoration: none;
+
+}
+
+.body{
+    height: 100vh; /*Esto hace que el "viewport" de html ocupe el 100 porciento de la pagina*/
+}
+
+
+/*ENCABEZADO O HEADER*/
+
+.header{ 
+    background-color: var(--color-primario);
+}
+.header__logo{
+    margin: 40px 0px 0px 5px;
+    width: 120px;
+    height: 48px;
+    display: flex;
+    align-items: flex-start;
+    
+    
+}
+
+/*CONTENIDO LADO IZQUIERDO*/
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    background-size: 100% 100%;
+    background-size: center;
+    position: relative;
+}
+
+.contenidoizq{
+    width: 55%;
+    margin: 55px 0px 0px 140px;
+    background-color: transparent;
+    
+}
+
+.contenidoizq__textarea{
+    width: 680px;
+    height: 450px;
+    background-color: transparent ;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: var(--color-secundario);
+    outline-color: var(--color-primario);
+    outline: 0px solid var(--color-boton-desencriptador);
+    resize: none;
+   
+}
+
+.contenidoizq__textarea::placeholder{
+    color:var(--color-secundario);
+}
+
+.contenidoizq__aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0%; /*relleno de los lados del elementos*/
+    gap: 8px;
+    position: absolute;
+    color: var(--color-aviso);
+    top: 530px;
+    background-color: transparent;
+}
+
+
+.contenidoizq__aviso__parrafo{
+    width: 100%;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 150%;
+    outline: none;
+    opacity: 0.8;
+    background-color: transparent;
+}
+
+.contenenidoizq__contenedor{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   gap: 8px;
+   position: absolute;
+   top: 570px; 
+   background-color: transparent;
+}
+
+.contenenidoizq__contenedor__encriptar{
+    width: 328px;
+    height: 67px;
+    /* border: solid var(--color-terciario); */
+    border-radius: 24px;
+    color: var(--color-secundario);
+    background-color: var(--color-terciario);
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    padding: 24px;
+    cursor: pointer;/*cuando pasa el curso por el boton aparece una mano*/
+}
+
+.contenenidoizq__contenedor__encriptar:active{
+    box-shadow:inset 3px 2px 5px var(--color-primario);
+}
+
+.contenenidoizq__contenedor__desencriptar{
+    width: 328px;
+    height: 67px;
+    /* border: 2px solid var(--color-secundario); */
+    border-radius: 24px;
+    color: var(--color-secundario);
+    background-color: var(--color-boton-desencriptador);
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    padding: 24px;
+    cursor: pointer; /*cuando pasa el curso por el boton aparece una mano*/
+}
+
+.contenenidoizq__contenedor__desencriptar:active{
+    box-shadow:inset 5px 2px 5px var(--color-primario);
+}
+/*-----esto es para que los botones cojan movimiento cuando pasen con el cursor-----*/
+.contenenidoizq__contenedor__encriptar:hover,
+.contenenidoizq__contenedor__desencriptar:hover,
+.contenido__tarjeta__copiar:hover{
+    transform: scale(0.98);
+  }
+
+/*CONTENIDO LADO DERECHO*/
+
+.contenidoder{
+    position: inherit;
+    width: 400px;
+    height: 650px;
+    margin-top: 0px;
+    background-color: transparent;
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 1px 1px 20px -1px var(--color-cuaternario);/*sombra de container*/
+}
+
+.contenidoder__tarjeta{
+    width: 400px;
+    margin: auto;
+    margin-top: 10%;
+    background-color: transparent;
+    
+}
+
+.contenidoder__tarjeta__imagen{
+    background-color: transparent;
+    width: 60%;
+}
+
+.contenidoder__tarjeta__parrafo1{
+    font-size: 30px;
+    font-weight: 900;
+    background-color: transparent;
+    color:var(--color-cuaternario);
+    margin: 32px 32px 0px 32px;
+    line-height: 120%;
+}
+
+.contenidoder__tarjeta__parrafo2{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    border: none;
+    background-color: transparent;
+    color:var(--color-cuaternario);
+    text-align: center;
+    margin: 32px 32px 0px 32px;
+}
+
+.mensaje{
+    width: 90%;
+    height: 75%;
+    position: absolute;
+    padding: 20px;
+    top: 5%;
+    left: 5%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    background-color: transparent;
+    color: var(--color-cuaternario);
+    outline:none;
+    border:none;
+    resize: none;
+}
+
+.contenido__tarjeta__copiar{
+    width: 328px;
+    height: 67px;
+    border: 1px solid var(--color-cuaternario);
+    border-radius: 24px;
+    color: var(--color-cuaternario);
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    padding: 24px;
+    margin: 20px;
+    bottom: 0;
+    left: 5%;
+    cursor: pointer;
+    position: absolute;
+    visibility: hidden;
+    /* box-shadow: 1px 1px 20px -1px var(--color-cuaternario); */
+}
+
+.contenido__tarjeta__copiar:active{
+    box-shadow:inset 2px 2px 10px var(--color-cuaternario);
+}
+.contenido__tarjeta__copiar:hover{
+    transform: scale(0.97);
+}
+
+/* footer{
+    background-color: transparent
+}    
+    ; */
+
+/*RESPONSIVIDAD*/
+
+@media (max-width: 1250px) {
+    main{
+        width: 1700px;
+        height: 1250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contenidoizq__textarea{
+        width: 688px;
+        height: 288x;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .contenidoizq{
+        width: 90%;
+        font-size: 30px;
+        align-items:baseline;
+        width: 100%;
+        margin: 50px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .contenenidoizq__contenedor{
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .contenidoizq__aviso{
+        position:initial;
+        margin: 15px;
+    }
+
+    .contenidoder{
+        margin-top: 30px;
+        width: 665px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+    }
+
+    .contenidoder__tarjeta{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .contenidoder__tarjeta__imagen{
+        display: none;
+    }
+    
+    .contenido__tarjeta__copiar{
+        position: initial;
+        width:70%;
+    }
+
+    .mensaje{
+        width: 90%;
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 720px) { 
+
+    header.header__logo{
+        width: auto;
+        padding: 2px;
+    }
+
+    .contenidoizq__textarea{
+    width: 90%;
+    }
+
+    .contenidoizq{
+        width: 90%;
+        font-size: 30px;
+        align-items:center;
+    }
+
+    .contenenidoizq__contenedor{
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .contenidoizq__aviso__parrafo{
+        margin: none;
+        
+    }
+
+    .contenenidoizq__contenedor{
+        width: 90%;
+        display: flex;
+        display: inline-flex;
+        gap: 20px;
+    }
+
+    .contenidoder{
+        width: 90%;
+        display: flex;
+        display: inline-flex;
+        
+    }
+
+    .mensaje{
+        width: 90%;
+        height: 70%;
+    }
+
+    .contenido__tarjeta__copiar{
+        font-size: 20px;
+
+    }
+}

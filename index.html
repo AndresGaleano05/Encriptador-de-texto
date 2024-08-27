@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__logo" src="./assets/Logo.png" alt="logo de alura latam">
+    </header>
+
+    <main>
+        <section class="contenidoizq"> 
+            <textarea class="contenidoizq__textarea" placeholder="Ingresa el texto aquí"></textarea>
+            <div class="contenidoizq__aviso">
+                <img class="contenidoizq__aviso__imagen" src="./assets/ICONO.png" alt="icono de admiracion circular dondo gris">
+                <p class="contenidoizq__aviso__parrafo">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenenidoizq__contenedor">
+                <button class="contenenidoizq__contenedor__encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="contenenidoizq__contenedor__desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+            </div> 
+        </section>           
+        <section class="contenidoder">    
+                <div id = "tarjeta" class="contenidoder__tarjeta">
+                    <img class="contenidoder__tarjeta__imagen" src="./assets/gladiador.jpg" alt="muñeco agachado con lupa en la mano">
+                    <p class="contenidoder__tarjeta__parrafo1">Ningún mensaje fue encontrado</h2>
+                    <p class="contenidoder__tarjeta__parrafo2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <textarea type="encriptado" id="mensaje textarea" class="mensaje" readonly></textarea>
+                <button type="submit" id="copiar" class="contenido__tarjeta__copiar">Copiar</button>
+        </section>
+
+    <footer>
+
+    </footer>
+    </main>
+<script src="script.js"></script>
+    
+</body>
+</html>
