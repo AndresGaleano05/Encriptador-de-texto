@@ -33,11 +33,11 @@ El texto "buenos dias" se encriptara como "bufatenternobers dimesais".
 
 ## Función de Desencriptación
 
-- `ai` se convierte en `a`
+- `ai`    se convierte en `a`
 - `enter` se convierte en `e`
-- `imes` se convierte en `i`
-- `ober` se convierte en `o`
-- `ufat` se convierte en `u`
+- `imes`  se convierte en `i`
+- `ober`  se convierte en `o`
+- `ufat`  se convierte en `u`
 
 Por ejemplo:
 El texto "hoberlai" se desencriptará de nuevo a "hola".
